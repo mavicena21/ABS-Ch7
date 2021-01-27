@@ -31,3 +31,18 @@ batregex = re.compile(r'Bat(man|mobile|copter|bat)')
 mo6 = batregex.search('Batmobile lost a wheel when fighting with Batbat')
 print(mo6.group())
 print(mo6.group(1))
+
+#optional matching with the question mark
+batwomantol = re.compile(r'Bat(wo)?man')
+mo7 = batwomantol.search('The Adventures of Batman')
+print(mo7.group())
+
+mo8 = batwomantol.search('The Advetures of Batwoman')
+print(mo8.group())
+
+#contoh question mark dalam no hp
+fontolregex = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d')
+mo9 = fontolregex.search('Nomor hpku adalah 415-555-4242')
+print(mo9.group())
+mo10 = fontolregex.search('Nomor hpku adalah 555-42424')
+print(mo10.group())
