@@ -46,3 +46,12 @@ mo9 = fontolregex.search('Nomor hpku adalah 415-555-4242')
 print(mo9.group())
 mo10 = fontolregex.search('Nomor hpku adalah 555-42424')
 print(mo10.group())
+
+#matching zero or more with the star
+asterisku = re.compile(r'Bat(wo)*man')
+an = asterisku.search('The adventures of Batman')
+an1 = asterisku.search('The adventures of Batwoman')
+an2 = asterisku.search(('The adventures of Batwowowowoman'))
+print(an.group())
+print(an1.group())
+print(an2.group())
