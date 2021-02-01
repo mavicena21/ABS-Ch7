@@ -64,3 +64,10 @@ so3 = supermanto.search('The adventures of Superwowowowoman')
 print(so1 == None)
 print(so2.group())
 print(so3.group())
+
+#matching specific repetitions with curly brackets
+haregex = re.compile(r'(Ha){3}')
+ha1 = haregex.search('HaHaHa')
+ha2 = haregex.search('HaHa')
+print(ha1.group())
+print(ha2 == None)
