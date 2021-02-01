@@ -55,3 +55,12 @@ an2 = asterisku.search(('The adventures of Batwowowowoman'))
 print(an.group())
 print(an1.group())
 print(an2.group())
+
+#matching one or more with the plus
+supermanto = re.compile(r'Super(wo)+man')
+so1 = supermanto.search('The adventures of Superman')
+so2 = supermanto.search('The adventures of Superwoman')
+so3 = supermanto.search('The adventures of Superwowowowoman')
+print(so1 == None)
+print(so2.group())
+print(so3.group())
