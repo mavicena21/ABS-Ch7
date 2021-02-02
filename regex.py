@@ -81,3 +81,11 @@ nongre1 = nongreedyregex.search('HaHaHaHaHaHaHa')
 
 print(gre1)
 print(nongre1)
+
+#search() method vs findall() method
+ss = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+ss1 = ss.search('Cell: 415-555-9999 Work: 212-555-0000')
+mm = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+mm1 = mm.findall('Cell: 415-555-9999 Work: 212-555-0000')
+print(ss1.group())
+print(mm1)
