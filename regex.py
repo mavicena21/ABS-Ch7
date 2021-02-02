@@ -71,3 +71,13 @@ ha1 = haregex.search('HaHaHa')
 ha2 = haregex.search('HaHa')
 print(ha1.group())
 print(ha2 == None)
+
+#greedy matching and non greedy matching
+greedyregex = re.compile(r'(Ha){3,5}')
+gre1 = greedyregex.search('HaHaHaHaHa')
+
+nongreedyregex = re.compile(r'(Ha){3,5}?')
+nongre1 = nongreedyregex.search('HaHaHaHaHaHaHa')
+
+print(gre1)
+print(nongre1)
