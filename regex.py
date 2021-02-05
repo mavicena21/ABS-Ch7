@@ -96,3 +96,11 @@ ya = nameregex.search('First Name: Al Last Name: Sweigart')
 print(ya.group(1))
 print(ya.group(2))
 
+#non greedy dot star
+ngdstar = re.compile(r'<.*?>')
+ngd1 = ngdstar.search('<To serve man> for dinner>')
+
+gdstar = re.compile(r'<.*>')
+ngd2 = gdstar.search('<To serve man> for dinner,>')
+print(ngd1.group())
+print(ngd2.group())
