@@ -89,3 +89,10 @@ mm = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
 mm1 = mm.findall('Cell: 415-555-9999 Work: 212-555-0000')
 print(ss1.group())
 print(mm1)
+
+#matching evertyhing with dot-star
+nameregex = re.compile(r'First Name: (.*) Last Name: (.*)')
+ya = nameregex.search('First Name: Al Last Name: Sweigart')
+print(ya.group(1))
+print(ya.group(2))
+
