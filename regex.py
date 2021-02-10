@@ -112,3 +112,8 @@ newlineregex = re.compile('.*', re.DOTALL)
 ap2 = newlineregex.search('Serve the public trust.\nProtect the innoncent\nUphold the law')
 print(ap1.group())
 print(ap2.group())
+
+#case
+spam = print('Hello')
+ahem = None == spam
+print(ahem)
